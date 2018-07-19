@@ -1,5 +1,5 @@
 /*global runRules */
-describe('runRules', function() {
+describe.only('runRules', function() {
 	'use strict';
 
 	function iframeReady(src, context, id, cb) {

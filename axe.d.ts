@@ -72,6 +72,24 @@ declare module axe {
 		target: string[],
 		html: string
 	}
+	interface RuleLocale {
+		[key: string]: {
+			description: string
+			help: string
+		}
+	}
+	interface CheckLocale {
+		[key: string]: {
+			pass: string
+			fail: string
+			incomplete: string | { [key: string]: string }
+		}
+	}
+	interface Locale {
+		lang?: string
+		rules?: RuleLocale
+		checks?: CheckLocale
+	}
 	interface Spec {
 		branding?: {
 			brand: string,
@@ -80,6 +98,7 @@ declare module axe {
 		reporter?: ReporterVersion,
 		checks?: Check[],
 		rules?: Rule[]
+		locale?: Locale
 	}
 	interface Check {
 		id: string,
