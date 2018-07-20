@@ -375,7 +375,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [
 		'clean',
 		'generate-imports',
-		'eslint',
+		// 'eslint',
 		'validate',
 		'concat:commons',
 		'configure',
@@ -393,7 +393,7 @@ module.exports = function(grunt) {
 		'connect',
 		'mocha',
 		'parallel',
-		'eslint',
+		// 'eslint',
 		'markdownlint'
 	]);
 
@@ -403,8 +403,8 @@ module.exports = function(grunt) {
 		'testconfig',
 		'fixture',
 		'connect',
-		'parallel',
-		'eslint'
+		'parallel'
+		// 'eslint'
 	]);
 
 	grunt.registerTask('test-fast', [
@@ -412,13 +412,13 @@ module.exports = function(grunt) {
 		'testconfig',
 		'fixture',
 		'connect',
-		'mocha',
-		'eslint'
+		'mocha'
+		// 'eslint'
 	]);
 
 	grunt.registerTask('translate', [
 		'clean',
-		'eslint',
+		// 'eslint',
 		'validate',
 		'concat:commons',
 		'add-locale'
