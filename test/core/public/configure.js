@@ -305,10 +305,10 @@ describe('axe.configure', function() {
 			var audit = axe._audit;
 			var localeData = audit.data;
 
-			assert.equal(localeData.rules.greeting.help, 'hi');
-			assert.equal(localeData.rules.greeting.description, 'hello');
-			assert.equal(localeData.checks.banana.messages.pass, 'pizza');
-			assert.equal(localeData.checks.banana.messages.fail, 'icecream');
+			assert.equal(localeData.rules.greeting.help(), 'hi');
+			assert.equal(localeData.rules.greeting.description(), 'hello');
+			assert.equal(localeData.checks.banana.messages.pass(), 'pizza');
+			assert.equal(localeData.checks.banana.messages.fail(), 'icecream');
 			assert.deepEqual(localeData.checks.banana.messages.incomplete, {
 				foo: 'meat',
 				bar: 'fruit',
@@ -333,9 +333,9 @@ describe('axe.configure', function() {
 			var localeData = audit.data;
 
 			assert.equal(localeData.rules.greeting.help, 'ABCDEFGHIKLMNOPQRSTVXYZ');
-			assert.equal(localeData.rules.greeting.description, 'hello');
+			assert.equal(localeData.rules.greeting.description(), 'hello');
 			assert.equal(localeData.checks.banana.messages.pass, 'yay');
-			assert.equal(localeData.checks.banana.messages.fail, 'icecream');
+			assert.equal(localeData.checks.banana.messages.fail(), 'icecream');
 			assert.deepEqual(localeData.checks.banana.messages.incomplete, {
 				foo: 'a',
 				bar: 'b',

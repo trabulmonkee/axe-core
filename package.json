@@ -55,7 +55,7 @@
     }
   },
   "scripts": {
-		"api-docs": "jsdoc --configure .jsdoc.json",
+    "api-docs": "jsdoc --configure .jsdoc.json",
     "build": "grunt",
     "test-dts": "tsc",
     "test": "npm run test-dts && grunt test",
