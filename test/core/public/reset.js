@@ -112,14 +112,11 @@ describe('axe.reset', function() {
 
 			axe.reset();
 
-			assert.deepEqual(axe._audit.data.checks.banana, {
-				impact: 'serious',
-				messages: {
-					pass: 'yay',
-					fail: 'boo',
-					incomplete: 'donno'
-				}
-			});
+			var banana = axe._audit.data.checks.banana;
+			assert.equal(banana.impact, 'serious');
+			assert.equal(banana.messages.pass(), 'yay');
+			assert.equal(banana.messages.fail(), 'boo');
+			assert.equal(banana.messages.incomplete, 'donno');
 		});
 	});
 });
